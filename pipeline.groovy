@@ -11,5 +11,5 @@ def findClonedRepos(manager){
 
 
     def fp = new FilePath(manager.build.workspace, 'results')
-    fp.write(results.toString())
+    fp.write(results.toString(), null)
 }
