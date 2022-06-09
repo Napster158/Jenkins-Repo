@@ -7,9 +7,9 @@ def findClonedRepos(manager){
     def lines = manager.build.logFile.readLines()
     def result = lines.findAll{it.contains("github")}
     manager.listener.logger.println(result.toString());
-    manager.listener.logger.println("Sample Groovy Line");
+    manager.listener.logger.println("---------------------");
 
 
     def fp = new FilePath(manager.build.workspace, 'results')
-    fp.write(result.toString())
+    fp.write(results.toString())
 }
