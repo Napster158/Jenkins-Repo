@@ -22,7 +22,7 @@ def setFailType(fail_type, type){
     return fail_type
 }
 
-def failType(manager){
+def findFailType(manager){
     def fail_type = ""
     def previous_fail_type = ""
     if (manager.logContains(".*Error cloning remote repo.*")) {
