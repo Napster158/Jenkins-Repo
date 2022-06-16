@@ -29,7 +29,7 @@ def findFailType(manager){
         fail_type = setFailType(fail_type, "Git_Clone")
     }
 
-    if (manager.logContains(".*NNC build SCaffe build failed.*")) {
+    if (manager.logContains(".*NNC build \(SCaffe\) build failed.*")) {
         fail_type = setFailType(fail_type, "SCaffe TV failure")
     }
 
