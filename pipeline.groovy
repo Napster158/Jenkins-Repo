@@ -34,7 +34,7 @@ def findFailType(manager){
     }
 
     if (manager.logContains(".*Error occurred while compiling NN models NPU compiler.*")) {
-        fail_type = setFailType(fail_type, "Git_Clone")
+        fail_type = setFailType(fail_type, "Possible compile failure")
     }
 
     def fp = new FilePath(manager.build.workspace, 'fail_type')
