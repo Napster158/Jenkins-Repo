@@ -14,7 +14,7 @@ def findClonedRepos(manager){
 def setFailType(fail_type, type){
     if (!fail_type.isEmpty()) {
         if (!fail_type.contains(type)) {
-            fail_type += "," + type + System.getProperty("line.separator")
+            fail_type += System.getProperty("line.separator") + "," + type
     }
     } else {
         fail_type += type
