@@ -9,7 +9,7 @@ def findClonedRepos(manager){
 
     def fp = new FilePath(manager.build.workspace, 'result')
     newResult = result.toString() + System.getProperty("line.seperator")
-    fp.write((newResult.toString(), null)
+    fp.write(newResult.toString(), null)
 }
 
 def setFailType(fail_type, type){
