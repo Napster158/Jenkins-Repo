@@ -8,7 +8,7 @@ def findClonedRepos(manager){
     manager.listener.logger.println("---------------------");
 
     def fp = new FilePath(manager.build.workspace, 'result')
-    newResult += result.toString() + System.getProperty("line.seperator")
+    def newResult += result.toString() + System.getProperty("line.seperator")
     fp.write(newResult.toString(), null)
 }
 
