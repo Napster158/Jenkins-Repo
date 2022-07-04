@@ -3,7 +3,7 @@ import hudson.model.*
 
 def findClonedRepos(manager){
     def lines = manager.build.logFile.readLines()
-    def result = lines.findAll{it.contains("github")}
+    def result = lines.findAll{it.contains("github") || it.contains("gitlab")}
     manager.listener.logger.println(result.toString());
     manager.listener.logger.println("---------------------");
 
