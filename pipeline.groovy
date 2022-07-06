@@ -7,8 +7,9 @@ def findClonedRepos(manager){
     manager.listener.logger.println(result.toString());
     manager.listener.logger.println("---------------------");
 
+    def result_str = result.join('\n')
     def fp = new FilePath(manager.build.workspace, 'result')
-    fp.write(result.toString(), null)
+    fp.write(result_str.toString(), null)
 }
 
 def setFailType(fail_type, type){
